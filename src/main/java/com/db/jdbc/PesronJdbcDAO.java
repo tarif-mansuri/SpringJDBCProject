@@ -33,9 +33,9 @@ public class PesronJdbcDAO {
 		
 	}
 	
-//	public List<Person> findAll(){
-//		return jdbcTemp.query("select * from person", new BeanPropertyRowMapper<Person>());
-//	}
+	public List<Person> findAll(){
+		return jdbcTemp.query("select * from person", new BeanPropertyRowMapper<Person>());
+	}
 	public Person findById(int id){
 		return jdbcTemp.queryForObject("select * from person where id = ?", new Object[] {id},new int[]{Types.INTEGER}
 		,new PersonMapper());

@@ -26,8 +26,8 @@ public class DatabaseProjectApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		//personJdbcDao.findAll();
-		//logger.info("Pesron {}",personJdbcDao.findAll());
+		personJdbcDao.findAll();
+		logger.info("Pesron {}",personJdbcDao.findAll());
 		logger.info("Pesron Find by Id>10002 {}",personJdbcDao.findById(10002));
 		logger.info("Delete from person by Id>10002 {}",personJdbcDao.deleteById(10002));
 		Person p = new Person();
